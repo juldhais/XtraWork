@@ -25,6 +25,7 @@ var scope = app.Services.CreateScope();
 var context = scope.ServiceProvider.GetRequiredService<XtraWorkContext>();
 context.Database.EnsureCreated();
 
+// global error handler
 app.UseExceptionHandler(options =>
 {
     options.Run(async context =>
